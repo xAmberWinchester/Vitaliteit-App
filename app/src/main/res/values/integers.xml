@@ -1,0 +1,4 @@
+<resources>
+    <integer name="coffee_timer_duration">100000</integer>
+    <integer name="coffee_timer_interval">1000</integer>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">The Happy App</string>
+    <string name="button_text">Touch Me</string>
+    <string name="timer_text">Seconds Left: %d</string>
+</resources>
