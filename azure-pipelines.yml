@@ -19,13 +19,13 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug'
 
-- task: AndroidSigning@3
-  inputs:
-    apkFiles: '**/*.apk'
-    apksignerKeystoreFile: '/keystore.jks'
-    apksignerKeystorePassword: '69420AG'
-    apksignerKeystoreAlias: 'thedamnkey'
-    apksignerKeyPassword: 'Virtality'
+# - task: AndroidSigning@3
+#   inputs:
+#     apkFiles: '**/*.apk'
+#     apksignerKeystoreFile: './keystore.jks'
+#     apksignerKeystorePassword: '69420AG'
+#     apksignerKeystoreAlias: 'thedamnkey'
+#     apksignerKeyPassword: 'Virtality'
 
 - task: CopyFiles@2
   inputs:
@@ -36,6 +36,6 @@ steps:
   inputs:
     serverEndpoint: 'Test2000'
     appSlug: 'Gron0005/Vitality'
-    appFile: '$(Build.ArtifactStagingDirectory)'
+    appFile: '$(Build.ArtifactStagingDirectory)/*.apk'
     releaseNotesOption: 'input'
     releaseNotesInput: 'rel'
