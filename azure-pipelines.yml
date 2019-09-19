@@ -22,13 +22,13 @@ steps:
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
-    targetFolder: '$(build.artifactStagingDirectory)'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: AppCenterDistribute@1
   inputs:
     serverEndpoint: 'Test2000'
     appSlug: 'Gron0005/Vitality'
-    appFile: '$(build.artifactStagingDirectory)'
+    appFile: '$(Build.ArtifactStagingDirectory)'
     releaseNotesOption: 'input'
     releaseNotesInput: 'rel'
 
