@@ -27,7 +27,7 @@ steps:
 - task: AppCenterDistribute@1
   inputs:
     serverEndpoint: 'Test2000'
-    appSlug: 'gron0005/Virtality'
+    appSlug: 'gron0005/Vitality'
     appFile: '$(build.artifactStagingDirectory)'
     releaseNotesOption: 'input'
     releaseNotesInput: 'rel'
