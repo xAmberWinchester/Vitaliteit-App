@@ -19,6 +19,14 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'assembleDebug'
 
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '**/*.apk'
+    apksignerKeystoreFile: 'keystore.jks'
+    apksignerKeystorePassword: '69420AG'
+    apksignerKeystoreAlias: 'thedamnkey'
+    apksignerKeyPassword: 'Virtality'
+
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
@@ -31,4 +39,3 @@ steps:
     appFile: '$(Build.ArtifactStagingDirectory)'
     releaseNotesOption: 'input'
     releaseNotesInput: 'rel'
-
